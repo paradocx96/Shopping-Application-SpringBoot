@@ -5,6 +5,8 @@ import javax.persistence.Id;
 
 @Entity
 public class Product {
+
+    @Id
     private String id;
     private String title;
     private double sellPrice;
@@ -26,7 +28,6 @@ public class Product {
     public Product() {
     }
 
-    @Id
     public String getId() {
         return id;
     }
