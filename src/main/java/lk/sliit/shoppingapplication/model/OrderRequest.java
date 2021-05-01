@@ -2,6 +2,7 @@ package lk.sliit.shoppingapplication.model;
 
 import java.util.Arrays;
 
+/*This class is not use for create tables.*/
 public class OrderRequest {
     private OrderDetail orderDetail;
     private OrderItem[]  orderItems;

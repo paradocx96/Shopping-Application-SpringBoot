@@ -5,7 +5,6 @@ import javax.persistence.Id;
 
 @Entity
 public class Product {
-
     @Id
     private String id;
     private String title;
@@ -13,9 +12,9 @@ public class Product {
     private double price; // number | null;
     private String image;
     private String categoryType;
-    private double stockQty;
+    private int stockQty;
 
-    public Product(String id, String title, double sellPrice, double price, String image, String categoryType, double stockQty) {
+    public Product(String id, String title, double sellPrice, double price, String image, String categoryType, int stockQty) {
         this.id = id;
         this.title = title;
         this.sellPrice = sellPrice;
@@ -76,11 +75,11 @@ public class Product {
         this.categoryType = cType;
     }
 
-    public double getStockQty() {
+    public int getStockQty() {
         return stockQty;
     }
 
-    public void setStockQty(double stockQty) {
+    public void setStockQty(int stockQty) {
         this.stockQty = stockQty;
     }
 

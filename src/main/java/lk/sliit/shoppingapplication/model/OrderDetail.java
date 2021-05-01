@@ -5,7 +5,6 @@ import javax.persistence.Id;
 
 @Entity
 public class OrderDetail {
-
     @Id
     private String orderId;
     private String orderDate;
