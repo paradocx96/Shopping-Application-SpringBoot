@@ -1,6 +1,7 @@
 package lk.sliit.shoppingapplication.service;
 
 import lk.sliit.shoppingapplication.OrderItemRepository;
+import lk.sliit.shoppingapplication.ProductRepository;
 import lk.sliit.shoppingapplication.model.OrderItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +12,12 @@ public class OrderItemService {
     @Autowired
     private OrderItemRepository orderItemRepository;
 
-    public void addAll(OrderItem[] orderItems) {
-//        orderItemRepository.save(orderItems);
+    @Autowired
+    private ProductRepository productRepository;
+
+    public void updateProductQtyAndSaveOrderItems(OrderItem[] orderItems) {
+        for (OrderItem orderItem : orderItems) {
+
+        }
     }
 }
