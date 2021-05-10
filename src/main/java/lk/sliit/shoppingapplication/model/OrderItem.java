@@ -2,11 +2,14 @@ package lk.sliit.shoppingapplication.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 
 @Entity
+@IdClass(OrderItemId.class)
 public class OrderItem {
     @Id
     private String orderId;
+    @Id
     private String productId;
     private int quantity;
 
