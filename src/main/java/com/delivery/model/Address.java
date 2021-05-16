@@ -2,10 +2,12 @@ package com.delivery.model;
 
 import javax.persistence.*;
 
+// Declare annotations for table name
 @Entity
 @Table(name = "address")
 public class Address {
 
+    // Declare variables with annotations for table columns
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -34,10 +36,12 @@ public class Address {
     @Column(name = "phone")
     private String phone;
     
+    // Implement default constructor
     public Address() {
 		super();
 	}
 
+    // Implement overload constructor
 	public Address(String userid, String title, String addresss, String province, String district, String city,
 			String zip, String phone) {
 		super();
@@ -51,6 +55,7 @@ public class Address {
 		this.phone = phone;
 	}
 
+    // Implement Getter & Setter for variables
 	public int getId() {
         return id;
     }

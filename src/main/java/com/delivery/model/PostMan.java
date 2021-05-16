@@ -2,10 +2,12 @@ package com.delivery.model;
 
 import javax.persistence.*;
 
+// Declare annotations for table name
 @Entity
 @Table(name = "postman")
 public class PostMan {
 
+	// Declare variables with annotations for table columns
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -19,10 +21,12 @@ public class PostMan {
     @Column(name = "status")
     private String status;
 
+	// Implement default constructor
     public PostMan() {
 		super();
 	}
 
+	// Implement overload constructor
 	public PostMan(String orderid, String price, String status) {
 		super();
 		this.orderid = orderid;
@@ -30,6 +34,7 @@ public class PostMan {
 		this.status = status;
 	}
 
+	// Implement Getter & Setter for variables
 	public int getId() {
 		return id;
 	}

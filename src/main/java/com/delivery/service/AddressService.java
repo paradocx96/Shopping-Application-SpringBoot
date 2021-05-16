@@ -9,22 +9,23 @@ import com.delivery.repo.AddressRepo;
 @Service
 public class AddressService {
 	
+	// Declare a repository interface variable
 	@Autowired
 	AddressRepo addressRepo;
 	
-	
+	// Implementation of add new address to database
 	public Address saveAddress(Address address) {		
 		return addressRepo.save(address);
 	}
 
-	
+	// Implementation of get calculated delivery value
 	public double calDeliveryCost(Address address) {
 		String dist = address.getDistrict();
 		double result = calculateDeliveryCharge(dist);
 		return result;
 	}
 	
-	
+	// Implementation of Delivery cost checker
 	public double calculateDeliveryCharge(String district) {
 		
 		double price = 100;
